@@ -137,15 +137,12 @@ body::after {
     line-height: 1;
 }
 
-.app-logo-wrap {
-    margin-left: -20px;
-}
-
 .app-logo {
     height: 170px;
     width: auto;
     display: block;
     image-rendering: auto;
+    margin-left: -20px;
     filter: brightness(1.35);
 }
 

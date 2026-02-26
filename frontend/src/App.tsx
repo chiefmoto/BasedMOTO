@@ -33,7 +33,7 @@ function Dashboard() {
             </div>
 
             <header className="app-header">
-                <div className="app-logo-wrap">
+                <div>
                     <img src="/logo.png" alt="Based Moto" className="app-logo" />
                     <div className="app-subtitle">First Rebase Token on Bitcoin</div>
                 </div>
