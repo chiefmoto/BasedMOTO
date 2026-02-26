@@ -248,9 +248,9 @@ export function Pool1Panel({ pool1Address, lpTokens, farmStart, bmotoAddress, nu
                 <button className="btn btn-secondary btn-sm" onClick={() => void refresh()}>↺</button>
             </div>
 
-            <div className="pool1-grid" style={numPools === 1 ? { display: 'block', maxWidth: '50%', margin: '0 auto' } : undefined}>
+            <div className={numPools === 1 ? undefined : 'pool1-grid'} style={numPools === 1 ? { maxWidth: '50%', margin: '0 auto' } : undefined}>
                 {activeIndices.map((i) => (
-                    <div key={i}>
+                    <div key={i} style={numPools === 1 ? { marginBottom: 8 } : undefined}>
                         <div className="card">
                             <div className="card-title">{POOL1_NAMES[i]}</div>
                             <div className="card-subtitle" style={{ marginBottom: 8 }}>
