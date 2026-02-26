@@ -35,11 +35,11 @@ if (!MNEMONIC) { console.error('Error: DEPLOYER_MNEMONIC not set in .env'); proc
 // ---------------------------------------------------------------------------
 // Deployed contract addresses (from deploy-testnet.mjs run)
 // ---------------------------------------------------------------------------
-const BMOTO_ADDR   = 'opt1sqpp37r0ja5z0k3uuypfv469nzktsyd0m7sdyfjkp';
-const POOL1_ADDR   = 'opt1sqqxjum7gcm7rctladkww646h2f8l5y8ra5728fu9';
-const POOL2_ADDR   = 'opt1sqzxc7zq7ay5hkjv9pq9rdqw6d3jahtzzmg8mrvcz';
-const REBASER_ADDR = 'opt1sqptr7lazuzk6ectwvqu2s6pju4wthq460strwxlf';
-const LP0_ADDR     = 'opt1sqp5gx9k0nrqph3sy3aeyzt673dz7ygtqxcfdqfle'; // PILL/MOTO LP
+const BMOTO_ADDR   = 'opt1sqrf773f6n3nxm3clsem3z5zt6pqddq60scvhysud';
+const POOL1_ADDR   = 'opt1sqzt4fugeweu3tvmqxz4gqtl0z9wt9xll0uvdnah7';
+const POOL2_ADDR   = 'opt1sqpfgp4gr0mep6pzd5tn0tmn7xkukjtw8e5kcguev';
+const REBASER_ADDR = 'opt1sqqne48k598kyhp6j3u25re6jxhj90vtcdv8k0y2n';
+const LP0_ADDR     = 'opt1sqq47sszp4zrj9xhss2ep54dc456za9aweqvqzr3g'; // PILL/MOTO LP
 
 // ---------------------------------------------------------------------------
 // Setup
@@ -96,10 +96,18 @@ async function caddr(addr, label = addr) {
     const start = Date.now();
 
     while (true) {
+        // Preferred: getPublicKeyInfo (works for contracts with registered ML-DSA key)
         const result = await provider.getPublicKeyInfo(addr, true).catch(() => undefined);
         if (result !== undefined && result !== null) {
             console.log(`  [indexed] ${label}`);
             return result;
+        }
+
+        // Fallback: getCode returns contractPublicKey even without ML-DSA registration
+        const codeInfo = await provider.getCode(addr).catch(() => undefined);
+        if (codeInfo?.contractPublicKey) {
+            console.log(`  [indexed via getCode] ${label}`);
+            return codeInfo.contractPublicKey;
         }
 
         const elapsed = Date.now() - start;

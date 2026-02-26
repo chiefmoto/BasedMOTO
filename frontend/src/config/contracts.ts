@@ -43,12 +43,12 @@ export const REGTEST_ADDRESSES: BMOTOAddresses = {
  * Pool2 LP (BMOTO/MOTO) is created by the team after farming starts.
  */
 export const TESTNET_ADDRESSES: BMOTOAddresses = {
-    bmoto:   'opt1sqpp37r0ja5z0k3uuypfv469nzktsyd0m7sdyfjkp',
-    pool1:   'opt1sqqxjum7gcm7rctladkww646h2f8l5y8ra5728fu9',
-    pool2:   'opt1sqzxc7zq7ay5hkjv9pq9rdqw6d3jahtzzmg8mrvcz',
-    rebaser: 'opt1sqptr7lazuzk6ectwvqu2s6pju4wthq460strwxlf',
+    bmoto:   'opt1sqrf773f6n3nxm3clsem3z5zt6pqddq60scvhysud',
+    pool1:   'opt1sqzt4fugeweu3tvmqxz4gqtl0z9wt9xll0uvdnah7',
+    pool2:   'opt1sqpfgp4gr0mep6pzd5tn0tmn7xkukjtw8e5kcguev',
+    rebaser: 'opt1sqqne48k598kyhp6j3u25re6jxhj90vtcdv8k0y2n',
     lpTokens: [
-        'opt1sqp5gx9k0nrqph3sy3aeyzt673dz7ygtqxcfdqfle', // PILL/MOTO LP (testnet)
+        'opt1sqq47sszp4zrj9xhss2ep54dc456za9aweqvqzr3g', // PILL/MOTO LP (testnet)
         'FILL_WHEN_LIVE',                                  // PEPE/MOTO — not yet on testnet
         'FILL_WHEN_LIVE',                                  // UNGA/MOTO — not yet on testnet
     ],
