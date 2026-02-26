@@ -1,9 +1,10 @@
-import { useWalletConnect } from '@btc-vision/walletconnect';
+import { useWalletConnect, SupportedWallets } from '@btc-vision/walletconnect';
 import { useOPNet, OPNetNetworkId } from '../contexts/OPNetProvider';
 import { formatAddr } from '../utils/format';
 
 export function WalletBar() {
-    const { walletAddress, openConnectModal, disconnect, connecting } = useWalletConnect();
+    const { walletAddress, connectToWallet, disconnect, connecting } = useWalletConnect();
+    const handleConnect = () => connectToWallet(SupportedWallets.OP_WALLET);
     const { networkId, networkLabel, switchNetwork, rpcError } = useOPNet();
 
     const handleNetwork = (id: OPNetNetworkId) => {
@@ -29,7 +30,7 @@ export function WalletBar() {
                 </div>
                 <button
                     className={`btn btn-sm ${walletAddress ? 'btn-disconnect' : 'btn-primary'}`}
-                    onClick={walletAddress ? disconnect : openConnectModal}
+                    onClick={walletAddress ? disconnect : handleConnect}
                     disabled={connecting}
                     style={{ background: 'rgba(0,0,0,0.35)' }}
                 >
