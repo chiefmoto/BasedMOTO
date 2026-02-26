@@ -1,0 +1,133 @@
+{
+    "functions": [
+        {
+            "name": "setContracts",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [
+                {
+                    "name": "bmoto",
+                    "type": "ADDRESS"
+                },
+                {
+                    "name": "pool1",
+                    "type": "ADDRESS"
+                },
+                {
+                    "name": "pool2",
+                    "type": "ADDRESS"
+                },
+                {
+                    "name": "bmotoMotoPair",
+                    "type": "ADDRESS"
+                },
+                {
+                    "name": "pool1LaunchBlock",
+                    "type": "UINT64"
+                },
+                {
+                    "name": "bmotoIsToken0",
+                    "type": "BOOL"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "updateTWAP",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [],
+            "outputs": []
+        },
+        {
+            "name": "rebase",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [],
+            "outputs": []
+        },
+        {
+            "name": "isRebaseEnabled",
+            "type": "View",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "enabled",
+                    "type": "BOOL"
+                }
+            ]
+        },
+        {
+            "name": "getTWAPInfo",
+            "type": "View",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "twapPrice",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "sampleCount",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "lastSampleBlock",
+                    "type": "UINT64"
+                },
+                {
+                    "name": "lastRebaseBlock",
+                    "type": "UINT64"
+                },
+                {
+                    "name": "currentBlock",
+                    "type": "UINT64"
+                }
+            ]
+        }
+    ],
+    "events": [
+        {
+            "name": "TWAPSampled",
+            "values": [
+                {
+                    "name": "spotPrice",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "sampleCount",
+                    "type": "UINT256"
+                }
+            ],
+            "type": "Event"
+        },
+        {
+            "name": "RebaseExecuted",
+            "values": [
+                {
+                    "name": "epoch",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "twapPrice",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "supplyDelta",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "isExpansion",
+                    "type": "BOOL"
+                }
+            ],
+            "type": "Event"
+        }
+    ]
+}

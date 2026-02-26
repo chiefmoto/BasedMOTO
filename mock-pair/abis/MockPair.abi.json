@@ -1,0 +1,35 @@
+{
+    "functions": [
+        {
+            "name": "setReserves",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [
+                {
+                    "name": "reserve0",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "reserve1",
+                    "type": "UINT256"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "getReserves",
+            "type": "View",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "blockTimestampLast",
+                    "type": "UINT64"
+                }
+            ]
+        }
+    ],
+    "events": []
+}

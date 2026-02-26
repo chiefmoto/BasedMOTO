@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 300" preserveAspectRatio="none">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="100%" r="80%" fx="50%" fy="100%">
+      <stop offset="0%"   stop-color="#ff44cc" stop-opacity="0.18"/>
+      <stop offset="45%"  stop-color="#7700cc" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#050012"  stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="white" stop-opacity="0"/>
+      <stop offset="40%"  stop-color="white" stop-opacity="0.5"/>
+      <stop offset="65%"  stop-color="white" stop-opacity="1"/>
+      <stop offset="100%" stop-color="white" stop-opacity="1"/>
+    </linearGradient>
+    <mask id="m">
+      <rect width="1440" height="300" fill="url(#fade)"/>
+    </mask>
+  </defs>
+
+  <g mask="url(#m)" fill="#050012">
+
+    <!-- FAR LEFT: sparse low buildings x=0–175 -->
+    <polygon points="
+      0,300  0,252  30,252  30,235  62,235  62,250
+      95,250  95,222  128,222  128,238  155,238
+      155,215  172,215  172,235  175,235  175,300"/>
+
+    <!-- LEFT MEDIUM RISE: x=182–400 -->
+    <polygon points="
+      182,300  182,232  210,232  210,212
+      238,212  238,190  268,190  268,165
+      298,165  298,142  328,142  328,122
+      355,122  355,105  380,105  380,122
+      395,122  395,105  400,105  400,300"/>
+
+    <!-- LEFT TALL CLUSTER: x=408–598, 4 pointed towers -->
+    <!-- tower peaks: x=445(y=6), x=484(y=13), x=527(y=18), x=562(y=30) -->
+    <polygon points="
+      408,300  408,98
+      420,82  430,65  435,48  439,30  442,18  444,10  446,6  449,10  452,18  456,30  459,48
+      463,65  467,52  471,35  475,22  479,15  483,13  488,13  492,15  496,22  500,35  504,52
+      508,65  513,48  518,32  522,22  526,18  530,18  534,22  539,32
+      544,52  549,40  555,32  559,30  563,30  567,38  572,55  578,72  587,88  597,98
+      598,300"/>
+
+    <!-- antennas: left tall cluster -->
+    <rect x="445" y="0" width="2" height="7"/>
+    <rect x="483" y="0" width="2" height="14"/>
+    <rect x="526" y="0" width="2" height="19"/>
+    <rect x="558" y="0" width="2" height="31"/>
+
+    <!-- CENTER MEGA CLUSTER: x=604–718, 2 ultra-tall spires (tallest overall) -->
+    <!-- spire peaks: x=640(y=3), x=683(y=5) -->
+    <polygon points="
+      604,300  604,90
+      615,72  624,52  630,32  634,15  637,8  640,3  643,8  647,15  651,32  655,52
+      660,72  665,55  671,35  676,18  679,8  682,5  686,5  690,8  694,18  699,35  705,55  711,70  715,82  718,90
+      718,300"/>
+
+    <!-- antennas: center mega cluster -->
+    <rect x="639" y="0" width="2" height="4"/>
+    <rect x="683" y="0" width="2" height="6"/>
+
+    <!-- RIGHT TOWER CLUSTER: x=725–895, 3 towers -->
+    <!-- tower peaks: x=760(y=12), x=803(y=16), x=847(y=22) -->
+    <polygon points="
+      725,300  725,88
+      736,72  743,52  748,35  752,22  756,15  760,12  764,15  768,22  772,35  776,52
+      782,68  788,50  794,32  798,20  803,16  807,20  812,32  818,50  825,65
+      831,50  837,35  842,25  847,22  851,25  856,35  862,50  868,65  878,80  888,90  895,94
+      895,300"/>
+
+    <!-- antennas: right tower cluster -->
+    <rect x="759" y="0" width="2" height="13"/>
+    <rect x="802" y="0" width="2" height="17"/>
+    <rect x="846" y="0" width="2" height="23"/>
+
+    <!-- RIGHT MEDIUM DESCENDING: x=902–1108 -->
+    <polygon points="
+      902,300  902,92
+      916,78  930,65  945,80  960,65  975,78  990,65
+      1005,92  1020,108  1038,125  1058,142  1078,158  1098,172  1108,180
+      1108,300"/>
+
+    <!-- FAR RIGHT TAPER: x=1115–1440 -->
+    <polygon points="
+      1115,300  1115,182
+      1138,182  1138,200  1162,200  1162,218
+      1192,218  1192,235  1225,235  1225,250
+      1262,250  1262,262  1302,262  1302,275
+      1345,275  1345,265  1385,265  1385,278
+      1440,278  1440,300"/>
+
+    <!-- Glow overlay -->
+    <rect width="1440" height="300" fill="url(#glow)"/>
+
+  </g>
+</svg>

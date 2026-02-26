@@ -1,0 +1,21 @@
+{
+    "name": "bmoto-scripts",
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+        "deploy": "node deploy-regtest.mjs",
+        "interact": "node interact-regtest.mjs"
+    },
+    "dependencies": {
+        "@btc-vision/bip32": "^7.1.2",
+        "@btc-vision/bitcoin": "^7.0.0-rc.6",
+        "@btc-vision/ecpair": "^4.0.5",
+        "@btc-vision/transaction": "^1.8.0-rc.8",
+        "opnet": "^1.8.1-rc.11"
+    },
+    "overrides": {
+        "bip39": {
+            "@noble/hashes": "1.7.2"
+        }
+    }
+}

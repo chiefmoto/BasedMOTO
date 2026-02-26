@@ -1,0 +1,63 @@
+{
+    "functions": [
+        {
+            "name": "rebase",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [
+                {
+                    "name": "supplyDelta",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "isExpansion",
+                    "type": "BOOL"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "setRebaseContract",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [
+                {
+                    "name": "addr",
+                    "type": "ADDRESS"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "getGonsPerFragment",
+            "type": "View",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "gonsPerFragment",
+                    "type": "UINT256"
+                }
+            ]
+        }
+    ],
+    "events": [
+        {
+            "name": "Rebase",
+            "values": [
+                {
+                    "name": "epoch",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "newSupply",
+                    "type": "UINT256"
+                }
+            ],
+            "type": "Event"
+        }
+    ]
+}

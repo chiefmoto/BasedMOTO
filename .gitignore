@@ -1,0 +1,21 @@
+# Environment — never commit secrets
+.env
+
+# Node
+node_modules/
+*/node_modules/
+
+# Build outputs
+frontend/dist/
+*/build/
+*.wasm
+
+# Deployment artifacts (contain on-chain state, not secrets — optional to commit)
+deployment.json
+deployment.testnet.json
+deployment.mainnet.json
+
+# Misc
+.DS_Store
+*.log
+wallets.json
